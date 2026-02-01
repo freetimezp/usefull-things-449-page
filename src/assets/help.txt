@@ -1,37 +1,3 @@
-<div class="contact-info-row">
-                <p>Obsessed Window</p>
-                <p>Qiang Thisbe</p>
-            </div>
-            <div class="contact-info-row">
-                <p>Voyage Truth</p>
-                <p>Olyvia Dirce</p>
-            </div>
-            <div class="contact-info-row">
-                <p>Sky Petals</p>
-                <p>Mani Mirzo</p>
-            </div>
-            <div class="contact-info-row">
-                <p>Birth Heart</p>
-                <p>Marcin Kerberos</p>
-            </div>
-            <div class="contact-info-row">
-                <p>Whispering Trainer</p>
-                <p>Zita Erland</p>
-            </div>
-            <div class="contact-info-row">
-                <p>Rose Misty</p>
-                <p>Kyran Lucretius</p>
-            </div>
-            <div class="contact-info-row">
-                <p>Silvery Fire</p>
-                <p>Hunberht Nikita</p>
-            </div>
-            <div class="contact-info-row">
-                <p>Falling Rose</p>
-                <p>Saleh Aynur</p>
-            </div>
-
-
             <div class="contact-info-row">
                 <p>Address</p>
                 <p>Ukraine, Lviv</p>

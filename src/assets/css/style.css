@@ -57,6 +57,7 @@ p {
     position: relative;
     width: 8rem;
     height: 8rem;
+    bottom: 2rem;
 }
 
 .contact-info {
