@@ -1,0 +1,66 @@
+<div class="contact-info-row">
+                <p>Obsessed Window</p>
+                <p>Qiang Thisbe</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Voyage Truth</p>
+                <p>Olyvia Dirce</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Sky Petals</p>
+                <p>Mani Mirzo</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Birth Heart</p>
+                <p>Marcin Kerberos</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Whispering Trainer</p>
+                <p>Zita Erland</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Rose Misty</p>
+                <p>Kyran Lucretius</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Silvery Fire</p>
+                <p>Hunberht Nikita</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Falling Rose</p>
+                <p>Saleh Aynur</p>
+            </div>
+
+
+            <div class="contact-info-row">
+                <p>Address</p>
+                <p>Ukraine, Lviv</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Current time</p>
+                <p>23:08:00 (01/02/2026)</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Email</p>
+                <p>contact@gmail.com</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Business email</p>
+                <p>proposition@gmail.com</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Collaborations</p>
+                <p>Selective Connections</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Jobs Inquiries</p>
+                <p>hire@gmail.com</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Phone (tel)</p>
+                <p>+380123456789</p>
+            </div>
+            <div class="contact-info-row">
+                <p>Social Media</p>
+                <p>@livelovelaugh9740</p>
+            </div>
