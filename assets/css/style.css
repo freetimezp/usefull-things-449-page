@@ -1,0 +1,570 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap");
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --base-100: #e9e9e3;
+    --base-200: #85857e;
+    --base-300: #0b0c0b;
+
+    --accent: #d9ff65;
+    --accent-soft: rgba(217, 255, 101, 0.12);
+
+    --border: rgba(233, 233, 227, 0.13);
+    --border-soft: rgba(233, 233, 227, 0.07);
+
+    --mono: "DM Mono", monospace;
+    --sans: "Space Grotesk", sans-serif;
+}
+
+html {
+    scrollbar-width: none;
+    background: var(--base-300);
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: var(--sans);
+    background: var(--base-300);
+    color: var(--base-100);
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.045rem;
+}
+
+::selection {
+    color: var(--base-300);
+    background: var(--accent);
+}
+
+/* ========================================
+   grid
+======================================== */
+
+.grid {
+    position: fixed;
+    inset: 0;
+
+    z-index: 20;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+        );
+
+    background-size: 10px 10px;
+
+    pointer-events: none;
+}
+
+/* ========================================
+   TOPBAR
+======================================== */
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 2rem 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.05rem;
+    color: var(--base-200);
+}
+
+.topbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.logo-dot,
+.status-dot {
+    width: 0.45rem;
+    height: 0.45rem;
+
+    border-radius: 50%;
+    background: var(--accent);
+
+    box-shadow: 0 0 15px rgba(217, 255, 101, 0.5);
+}
+
+.topbar-status {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+/* ========================================
+   CONTACT VISUAL
+======================================== */
+
+.contact-visual {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.visual-label {
+    position: absolute;
+    left: 3rem;
+    right: 3rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.04rem;
+    color: var(--base-200);
+}
+
+.visual-label-top {
+    top: 7.5rem;
+}
+
+.visual-label-bottom {
+    bottom: 2.5rem;
+}
+
+.visual-label span:last-child {
+    color: rgba(233, 233, 227, 0.35);
+}
+
+/* ========================================
+   CENTRAL ICON
+======================================== */
+
+.contact-icon {
+    position: relative;
+
+    width: 9rem;
+    height: 9rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-1.5rem);
+
+    will-change: transform;
+}
+
+.icon-frame {
+    position: relative;
+    z-index: 2;
+
+    width: 5.5rem;
+    height: 5.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(233, 233, 227, 0.35);
+    border-radius: 50%;
+
+    background: rgba(233, 233, 227, 0.025);
+
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.025),
+        0 0 50px rgba(217, 255, 101, 0.07),
+        inset 0 0 30px rgba(255, 255, 255, 0.025);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    overflow: hidden;
+}
+
+.icon-frame::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.15),
+        transparent 45%,
+        rgba(217, 255, 101, 0.04)
+    );
+}
+
+.icon-frame i {
+    position: relative;
+    z-index: 1;
+
+    font-size: 1.65rem;
+    color: var(--base-100);
+
+    filter: drop-shadow(0 0 12px rgba(233, 233, 227, 0.25));
+}
+
+/* Soft glow behind icon */
+
+.icon-halo {
+    position: absolute;
+    inset: -2rem;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(217, 255, 101, 0.14),
+        transparent 68%
+    );
+
+    filter: blur(18px);
+    opacity: 0.65;
+
+    animation: haloPulse 5s ease-in-out infinite;
+}
+
+@keyframes haloPulse {
+    0%,
+    100% {
+        transform: scale(0.9);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.8;
+    }
+}
+
+/* Orbit lines */
+
+.icon-orbit {
+    position: absolute;
+    inset: -0.75rem;
+
+    border: 1px solid rgba(233, 233, 227, 0.12);
+    border-radius: 50%;
+}
+
+.orbit-one {
+    transform: rotate(25deg) scaleX(1.65);
+    animation: orbitRotate 18s linear infinite;
+}
+
+.orbit-two {
+    inset: -1.35rem;
+
+    border-color: rgba(217, 255, 101, 0.1);
+
+    transform: rotate(-30deg) scaleY(0.6);
+    animation: orbitRotateReverse 24s linear infinite;
+}
+
+@keyframes orbitRotate {
+    from {
+        transform: rotate(25deg) scaleX(1.65);
+    }
+
+    to {
+        transform: rotate(385deg) scaleX(1.65);
+    }
+}
+
+@keyframes orbitRotateReverse {
+    from {
+        transform: rotate(-30deg) scaleY(0.6);
+    }
+
+    to {
+        transform: rotate(-390deg) scaleY(0.6);
+    }
+}
+
+.icon-index {
+    position: absolute;
+    bottom: -1.7rem;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 0.6rem;
+
+    font-family: var(--mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.05rem;
+    white-space: nowrap;
+
+    color: var(--base-200);
+}
+
+.icon-number {
+    color: var(--accent);
+}
+
+/* ========================================
+   CONTACT INFO
+======================================== */
+
+.contact-info {
+    position: relative;
+
+    width: 100%;
+    height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 1.5rem;
+
+    overflow: hidden;
+    z-index: 2;
+}
+
+.contact-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+
+    will-change: gap, transform;
+}
+
+.contact-info-row p {
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-info-row > p:last-child {
+    color: var(--base-200);
+}
+
+.row-label {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 0.75rem;
+
+    text-align: right;
+}
+
+.row-number {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: rgba(233, 233, 227, 0.25);
+
+    transform: translateY(-0.1rem);
+}
+
+.contact-info-row p:last-child {
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+/* ========================================
+   BOTTOM BAR
+======================================== */
+
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 2rem 3rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 10;
+
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.04rem;
+
+    color: rgba(233, 233, 227, 0.25);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1000px) {
+    p {
+        font-size: 1rem;
+    }
+
+    .topbar,
+    .bottom-bar {
+        padding: 1.5rem;
+    }
+
+    .visual-label {
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .visual-label-top {
+        top: 6rem;
+    }
+
+    .visual-label-bottom {
+        bottom: 2rem;
+    }
+
+    .contact-info {
+        gap: 1.15rem;
+    }
+
+    .contact-info-row {
+        gap: 0.75rem;
+    }
+
+    .row-label {
+        gap: 0.5rem;
+    }
+
+    .row-number {
+        font-size: 0.5rem;
+    }
+
+    .icon-frame {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .icon-frame i {
+        font-size: 1.3rem;
+    }
+
+    .contact-icon {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .topbar-status {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        font-size: 0.55rem;
+    }
+
+    .bottom-bar {
+        font-size: 0.5rem;
+        gap: 1rem;
+    }
+
+    .bottom-bar span:last-child {
+        text-align: right;
+    }
+
+    .visual-label {
+        font-size: 0.5rem;
+    }
+
+    .contact-info {
+        gap: 1rem;
+    }
+
+    .contact-info-row {
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+
+    .contact-info-row p {
+        font-size: 0.8rem;
+        letter-spacing: -0.025rem;
+    }
+
+    .row-label {
+        gap: 0.35rem;
+    }
+
+    .row-number {
+        display: none;
+    }
+
+    .contact-icon {
+        transform: translateY(-1rem);
+    }
+
+    .icon-frame {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .icon-frame i {
+        font-size: 1.15rem;
+    }
+
+    .orbit-one {
+        transform: rotate(25deg) scaleX(1.4);
+    }
+
+    .orbit-two {
+        transform: rotate(-30deg) scaleY(0.7);
+    }
+
+    .icon-index {
+        bottom: -1.4rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}

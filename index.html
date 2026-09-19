@@ -1,61 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/vite.svg" type="image/svg+xml" />
-        <link rel="stylesheet" href="./src/assets/css/style.css" />
-        <title>Project</title>
+
+        <link rel="stylesheet" href="./assets/css/style.css" />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
+
+        <title>Contact — Project</title>
     </head>
 
     <body>
+        <div class="grid"></div>
+
+        <header class="topbar">
+            <div class="topbar-logo">
+                <span class="logo-dot"></span>
+                <span>CONTACT / Exp. #449</span>
+            </div>
+
+            <div class="topbar-status">
+                <span class="status-dot"></span>
+                AVAILABLE FOR SELECTED PROJECTS
+            </div>
+        </header>
+
         <section class="contact-visual">
             <div class="contact-icon">
-                <img src="./src/assets/images/icon-1.png" alt="" />
+                <div class="icon-halo"></div>
+
+                <div class="icon-frame">
+                    <i class="fa-solid fa-at"></i>
+                </div>
+
+                <div class="icon-orbit orbit-one"></div>
+                <div class="icon-orbit orbit-two"></div>
+
+                <div class="icon-index">
+                    <span>CONTACT</span>
+                    <span class="icon-number">01</span>
+                </div>
             </div>
         </section>
 
-        <section class="contact-info">
-            <div class="contact-info-row">
-                <p>Address</p>
-                <p>Ukraine, Lviv</p>
+        <main class="contact-info">
+            <div class="contact-info-row" data-icon="fa-at" data-number="01">
+                <div class="row-label">
+                    <span class="row-number">01</span>
+                    <p>Address</p>
+                </div>
+
+                <p>Ukraine, Kyiv</p>
             </div>
-            <div class="contact-info-row">
-                <p>Current time</p>
-                <p>23:08:00 (01/02/2026)</p>
+
+            <div class="contact-info-row" data-icon="fa-clock" data-number="02">
+                <div class="row-label">
+                    <span class="row-number">02</span>
+                    <p>Current time</p>
+                </div>
+
+                <p class="current-time">20:07:00 (19/09/2026)</p>
             </div>
-            <div class="contact-info-row">
-                <p>Email</p>
+
+            <div
+                class="contact-info-row"
+                data-icon="fa-envelope"
+                data-number="03"
+            >
+                <div class="row-label">
+                    <span class="row-number">03</span>
+                    <p>Email</p>
+                </div>
+
                 <p>contact@gmail.com</p>
             </div>
-            <div class="contact-info-row">
-                <p>Business email</p>
-                <p>proposition@gmail.com</p>
+
+            <div
+                class="contact-info-row"
+                data-icon="fa-briefcase"
+                data-number="04"
+            >
+                <div class="row-label">
+                    <span class="row-number">04</span>
+                    <p>Business email</p>
+                </div>
+
+                <p>worker@gmail.com</p>
             </div>
-            <div class="contact-info-row">
-                <p>Collaborations</p>
-                <p>Selective Connections</p>
+
+            <div
+                class="contact-info-row"
+                data-icon="fa-handshake"
+                data-number="05"
+            >
+                <div class="row-label">
+                    <span class="row-number">05</span>
+                    <p>Collaborations</p>
+                </div>
+
+                <p>Select & Connect</p>
             </div>
-            <div class="contact-info-row">
-                <p>Jobs Inquiries</p>
+
+            <div
+                class="contact-info-row"
+                data-icon="fa-user-tie"
+                data-number="06"
+            >
+                <div class="row-label">
+                    <span class="row-number">06</span>
+                    <p>Jobs Inquiries</p>
+                </div>
+
                 <p>hire@gmail.com</p>
             </div>
-            <div class="contact-info-row">
-                <p>Phone (tel)</p>
+
+            <div class="contact-info-row" data-icon="fa-phone" data-number="07">
+                <div class="row-label">
+                    <span class="row-number">07</span>
+                    <p>Phone (tel)</p>
+                </div>
+
                 <p>+380123456789</p>
             </div>
-            <div class="contact-info-row">
-                <p>Social Media</p>
+
+            <div
+                class="contact-info-row"
+                data-icon="fa-share-nodes"
+                data-number="08"
+            >
+                <div class="row-label">
+                    <span class="row-number">08</span>
+                    <p>Social Media</p>
+                </div>
+
                 <p>@livelovelaugh9740</p>
             </div>
-        </section>
+        </main>
+
+        <footer class="bottom-bar">
+            <span>© 2026 / ALL RIGHTS RESERVED</span>
+            <span>LET'S CREATE SOMETHING MEMORABLE</span>
+        </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-
         <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
 
-        <script type="module" src="./src/assets/js/main.js"></script>
+        <script type="module" src="./assets/js/main.js"></script>
     </body>
 </html>
