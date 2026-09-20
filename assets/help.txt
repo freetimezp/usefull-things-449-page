@@ -1,32 +1,152 @@
-            <div class="contact-info-row">
-                <p>Address</p>
-                <p>Ukraine, Lviv</p>
+
+AVAILABLE FOR SELECTED PROJECTS
+
+
+
+
+ <div class="contact-info-row" data-icon="fa-at" data-number="01">
+                <div class="row-label">
+                    <span class="row-number">01</span>
+                    <p>Address</p>
+                </div>
+
+                <p>Ukraine, Kyiv</p>
             </div>
-            <div class="contact-info-row">
-                <p>Current time</p>
-                <p>23:08:00 (01/02/2026)</p>
+
+            <div class="contact-info-row" data-icon="fa-clock" data-number="02">
+                <div class="row-label">
+                    <span class="row-number">02</span>
+                    <p>Current time</p>
+                </div>
+
+                <p class="current-time">20:07:00 (19/09/2026)</p>
             </div>
-            <div class="contact-info-row">
-                <p>Email</p>
+
+            <div
+                class="contact-info-row"
+                data-icon="fa-envelope"
+                data-number="03"
+            >
+                <div class="row-label">
+                    <span class="row-number">03</span>
+                    <p>Email</p>
+                </div>
+
                 <p>contact@gmail.com</p>
             </div>
-            <div class="contact-info-row">
-                <p>Business email</p>
-                <p>proposition@gmail.com</p>
+
+            <div
+                class="contact-info-row"
+                data-icon="fa-briefcase"
+                data-number="04"
+            >
+                <div class="row-label">
+                    <span class="row-number">04</span>
+                    <p>Business email</p>
+                </div>
+
+                <p>worker@gmail.com</p>
             </div>
-            <div class="contact-info-row">
-                <p>Collaborations</p>
-                <p>Selective Connections</p>
+
+            <div
+                class="contact-info-row"
+                data-icon="fa-handshake"
+                data-number="05"
+            >
+                <div class="row-label">
+                    <span class="row-number">05</span>
+                    <p>Collaborations</p>
+                </div>
+
+                <p>Select & Connect</p>
             </div>
-            <div class="contact-info-row">
-                <p>Jobs Inquiries</p>
+
+            <div
+                class="contact-info-row"
+                data-icon="fa-user-tie"
+                data-number="06"
+            >
+                <div class="row-label">
+                    <span class="row-number">06</span>
+                    <p>Jobs Inquiries</p>
+                </div>
+
                 <p>hire@gmail.com</p>
             </div>
-            <div class="contact-info-row">
-                <p>Phone (tel)</p>
+
+            <div class="contact-info-row" data-icon="fa-phone" data-number="07">
+                <div class="row-label">
+                    <span class="row-number">07</span>
+                    <p>Phone (tel)</p>
+                </div>
+
                 <p>+380123456789</p>
             </div>
-            <div class="contact-info-row">
-                <p>Social Media</p>
+
+            <div
+                class="contact-info-row"
+                data-icon="fa-share-nodes"
+                data-number="08"
+            >
+                <div class="row-label">
+                    <span class="row-number">08</span>
+                    <p>Social Media</p>
+                </div>
+
                 <p>@livelovelaugh9740</p>
             </div>
+
+
+
+
+
+
+
+
+            <span>© 2026 / ALL RIGHTS RESERVED</span>
+            <span>LET'S CREATE SOMETHING MEMORABLE</span>
+
+
+
+
+
+:root {
+    --base-100: #e9e9e3;
+    --base-200: #85857e;
+    --base-300: #0b0c0b;
+
+    --accent: #d9ff65;
+    --accent-soft: rgba(217, 255, 101, 0.12);
+
+    --border: rgba(233, 233, 227, 0.13);
+    --border-soft: rgba(233, 233, 227, 0.07);
+
+    --mono: "DM Mono", monospace;
+    --sans: "Space Grotesk", sans-serif;
+}
+
+
+
+
+
+
+const contactInfo = document.querySelector(".contact-info");
+const contactVisual = document.querySelector(".contact-visual");
+const contactIcon = document.querySelector(".contact-icon i");
+const iconNumber = document.querySelector(".icon-number");
+
+
+
+
+
+
+const iconMap = {
+    "01": "fa-at",
+    "02": "fa-clock",
+    "03": "fa-envelope",
+    "04": "fa-briefcase",
+    "05": "fa-handshake",
+    "06": "fa-user-tie",
+    "07": "fa-phone",
+    "08": "fa-share-nodes",
+};
